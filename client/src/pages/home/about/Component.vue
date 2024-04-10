@@ -45,4 +45,10 @@ export default defineComponent({
   font-size: 0.9rem;
   font-weight: 500;
 }
+@media screen and (max-width: 550px) {
+  .component {
+    text-align: center;
+    width: 90%;
+  }
+}
 </style>

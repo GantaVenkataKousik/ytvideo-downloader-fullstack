@@ -60,7 +60,7 @@ button:hover {
   input {
     outline: none;
     border: 2px solid #d24e53;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 3.5rem;
     font-size: 1.2rem;
     width: 85%;
