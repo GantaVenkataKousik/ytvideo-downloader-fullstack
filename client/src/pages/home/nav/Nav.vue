@@ -50,6 +50,19 @@
 .nav-container .container li span {
   margin-right: 0.2rem;
 }
+@media screen and (max-width: 550px) {
+  .nav-container .container {
+    display: none;
+  }
+  .nav-container {
+    display: block;
+  }
+  .nav-container .logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 </style>
 
 <script></script>

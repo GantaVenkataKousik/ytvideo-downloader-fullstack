@@ -23,6 +23,14 @@
   font-size: 1.2rem;
   color: #505254;
 }
+@media screen and (max-width: 550px) {
+  .tagline {
+    padding: 0 2%;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 5vh;
+  }
+}
 </style>
 
 <script></script>

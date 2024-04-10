@@ -6,7 +6,7 @@ import Download from './download/Download.vue'
 </script>
 
 <template>
-  <div className="home">
+  <div class="home">
     <Nav></Nav>
     <Tagline></Tagline>
     <Download></Download>
@@ -18,7 +18,6 @@ import Download from './download/Download.vue'
 .home {
   background: #21588b;
   color: #fff;
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
 }
 </style>

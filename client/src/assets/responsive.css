@@ -1,0 +1,8 @@
+@media screen and (max-width: 550px) {
+  .home {
+    width: 100%;
+  }
+  .nav-container .elements {
+    display: none;
+  }
+}

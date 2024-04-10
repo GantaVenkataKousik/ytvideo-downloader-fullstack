@@ -69,4 +69,28 @@ export default {
   margin: 0 auto;
   font-weight: 500;
 }
+@media screen and (max-width: 550px) {
+  .about {
+    margin-top: 4vh;
+    text-align: center;
+  }
+  .about p {
+    font-size: 1.3rem;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+  .about h2 {
+    font-size: 2rem;
+    padding: 0 0.4rem;
+  }
+  .components {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5vh;
+  }
+}
 </style>

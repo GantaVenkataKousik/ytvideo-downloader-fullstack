@@ -1,6 +1,7 @@
 <script setup>
 import Home from './pages/home/Home.vue'
 import './assets/main.css'
+import './assets/responsive.css'
 </script>
 
 <template>
