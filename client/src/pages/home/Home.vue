@@ -19,5 +19,6 @@ import Download from './download/Download.vue'
   background: #21588b;
   color: #fff;
   height: 100vh;
+  overflow: hidden;
 }
 </style>

@@ -11,13 +11,13 @@
 <style scoped>
 .tagline {
   display: flex;
-  widows: 100%;
+  width: 100%;
   height: 3.5vh;
   align-items: center;
   padding: 0 10%;
   justify-content: space-between;
   background: #fff;
-  margin-bottom: 3vh;
+  margin-bottom: 10vh;
 }
 .tagline li {
   font-size: 1.2rem;
