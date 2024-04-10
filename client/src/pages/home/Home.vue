@@ -18,6 +18,7 @@ import Download from './download/Download.vue'
 .home {
   background: #21588b;
   color: #fff;
+  min-height: 100vh; /* Minimum height is set to 100% of the viewport height */
   height: auto;
 }
 </style>
