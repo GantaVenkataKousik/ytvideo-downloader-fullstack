@@ -1,32 +1,24 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Home from './pages/home/Home.vue'
+import './assets/main.css'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div id="app"><Home></Home></div>
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+#app {
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
-
 @media (min-width: 1024px) {
   header {
     display: flex;
