@@ -1,10 +1,44 @@
 <template>
   <div class="download">
     <h1>Download HD Youtube Videos</h1>
-    <input placeholder="Paste your URL here...." />
-    <button>Download <i class="fa-solid fa-download"></i></button>
+    <input placeholder="Paste your URL here...." v-model="videoUrl" />
+    <button @click="downloadVideo">
+      Download <i class="fa-solid fa-download"></i>
+    </button>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      videoUrl: ''
+    }
+  },
+  methods: {
+    async downloadVideo () {
+      try {
+        const response = await fetch('http://localhost:9002/downloadVideo', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ url: this.videoUrl })
+        })
+        if (response.ok) {
+          // Handle success, maybe show a success message to the user
+          console.log('Video downloaded successfully')
+        } else {
+          // Handle error
+          console.error('Failed to download video')
+        }
+      } catch (error) {
+        console.error('Error downloading video:', error)
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
 .download {
@@ -87,5 +121,3 @@ button:hover {
   }
 }
 </style>
-
-<script></script>
