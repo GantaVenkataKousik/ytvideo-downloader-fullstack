@@ -20,13 +20,16 @@ export default {
   methods: {
     async downloadVideo () {
       try {
-        const response = await fetch('http://localhost:9002/downloadVideo', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ url: this.videoUrl })
-        })
+        const response = await fetch(
+          'https://ytvideo-downloader-api.vercel.app/downloadVideo',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ url: this.videoUrl })
+          }
+        )
 
         if (response.ok) {
           const blob = await response.blob()
