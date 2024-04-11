@@ -10,7 +10,6 @@
 
 <script>
 import confetti from 'canvas-confetti'
-
 export default {
   data () {
     return {
