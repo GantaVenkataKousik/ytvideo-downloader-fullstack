@@ -2,7 +2,7 @@
   "REWRITES": [
     {
       "SOURCE": "/(.*)",
-      "DESTINATION": "/"
+      "DESTINATION": "https://youtube-video-downloader-bay.vercel.app/"
     }
   ]
 }
