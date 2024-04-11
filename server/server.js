@@ -69,6 +69,28 @@ app.post('/downloadVideo', async (req, res) => {
     res.status(500).send('Internal Server Error')
   }
 })
+app.get('/', async (req, res) => {
+  const htmlContent = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <!-- Add any CSS styles here if needed -->
+      </head>
+      <body>
+        <div class="container">
+          <h1>Welcome!</h1>
+          <p>Hello, and welcome to our website.</p>
+          <!-- Add any additional content or elements here -->
+        </div>
+      </body>
+      </html>
+    `
+
+  res.send(htmlContent)
+})
 app.listen(9002, () => {
   console.log(
     `Server running on ${9002} Mode on the Port ${process.env.PORT}`.bgBlue
