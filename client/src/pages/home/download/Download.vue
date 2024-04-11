@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import confetti from 'canvas-confetti'
+
 export default {
   data () {
     return {
@@ -25,16 +27,40 @@ export default {
           },
           body: JSON.stringify({ url: this.videoUrl })
         })
+
         if (response.ok) {
-          // Handle success, maybe show a success message to the user
-          console.log('Video downloaded successfully')
+          const blob = await response.blob()
+          const blobUrl = URL.createObjectURL(blob)
+
+          // Create a link element
+          const link = document.createElement('a')
+          link.href = blobUrl
+          link.download = 'downloaded_video.mp4'
+
+          // Append the link to the document body
+          document.body.appendChild(link)
+
+          // Programmatically click the link to trigger the download
+          link.click()
+
+          // Clean up by removing the link and revoking the blob URL
+          document.body.removeChild(link)
+          URL.revokeObjectURL(blobUrl)
         } else {
-          // Handle error
-          console.error('Failed to download video')
+          console.error('Failed to download video:', response.statusText)
         }
       } catch (error) {
         console.error('Error downloading video:', error)
       }
+    },
+    showConfetti () {
+      // Trigger confetti effect
+      confetti({
+        particleCount: 500,
+        spread: 100,
+        origin: { y: 0.6 },
+        velocity: 100
+      })
     }
   }
 }
@@ -53,7 +79,7 @@ input {
   border: 2px solid #d24e53;
   padding: 1rem 1.5rem;
   border-radius: 3.5rem;
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   width: 45%;
   display: block;
   margin: 0 auto;
@@ -62,7 +88,7 @@ input {
   color: #39393b;
 }
 input::placeholder {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: #4a4b4d;
   font-weight: 540;
 }
